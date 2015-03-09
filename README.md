@@ -16,14 +16,14 @@ Diving deeper in the MVC aspects of Rails
   1. What is the Rails helper method that creates the HTML for links? The 'link_to' Rails helper method creates the HTML for links.
 1. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
 1. Read the [Odin Project Views Guide](http://www.theodinproject.com/ruby-on-rails/views) and use it to <strong>answer the following questions</strong>
-  1. What is a layout?
-  1. What's the difference between a "view template" and a "layout"?
-  1. What is a "Preprocessor"?
-  1. Why are preprocessors useful?
-  1. How do you make sure a preprocessor runs on your file?
+  1. What is a layout? Layouts are what contain <head> tags or the <DOCTYPE> declaration or some other basic structure that's present in all pages.
+  1. What's the difference between a "view template" and a "layout"? View templatesis what is rendered form the controller and isn't the entire webpage. The layout contains the basic html elements that makes the structure of a basic webpage. 
+  1. What is a "Preprocessor"? a preprocessor is a program that modifies data to conform with the inputs of another program. (ie ERB)
+  1. Why are preprocessors useful? These are usefull because they are an easy way to implement multiple languages within one file while being very efficient.
+  1. How do you make sure a preprocessor runs on your file? The file name must have the extension .erb. 
   1. What's the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
-  1. What is the difference between the <%= and <% tags?
-  1. What is a view partial?
+  1. What is the difference between the <%= and <% tags? <% is used for purely code-related stuff like if statements and for loops, where you don't actually want anything displayed. Where as <%= outputts important peices of the instance variables that one has received from your controller.
+  1. What is a view partial? 
   1. How do you insert a partial into your view?
   1. How can you tell that a view file is a partial?
   1. How do you pass a local variable to a partial?
