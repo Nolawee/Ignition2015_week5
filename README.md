@@ -8,9 +8,12 @@ Diving deeper in the MVC aspects of Rails
   1. What is the "Root" route? The "Root route tells rails wchich controller and action(methode inside the contoller) to map that that route to. 
   1. What are the seven RESTful routes for a resource? (1) GET all the posts.(2) GET just one specific post.(3) GET the page that lets you create a new post.(4) POST the data you just filled out for a new post back to the server so it can create that post.(5) GET the page that lets you edit an existing post (aka view the "edit post page).(6) PUT the data you just filled out to edit the post back to the server so it can perform the update.(7) DELETE on specific post by sending a delete request to the server.
   1. Which RESTful routes share the same URL but use different verbs? Routes (1) get,(4)post with the url "/posts/". Routes (2) get,(6) put,(7) delete with the url "/posts/:id".
-  1. How do you specify an ID or other variable in a route?
-  1. How can you easily write all seven RESTful routes in Rails?
-  1. What is the Rails helper method that creates the HTML for links?
+  1. How do you specify an ID or other variable in a route? To specify an I or other variable in a route on will need to supply those to the hellper methods.
+  1. How can you easily write all seven RESTful routes in Rails? 
+      ...
+      resources :posts
+      ...
+  1. What is the Rails helper method that creates the HTML for links? The 'link_to' Rails helper method creates the HTML for links.
 1. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
 1. Read the [Odin Project Views Guide](http://www.theodinproject.com/ruby-on-rails/views) and use it to <strong>answer the following questions</strong>
   1. What is a layout?
