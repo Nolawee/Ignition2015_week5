@@ -23,12 +23,28 @@ Diving deeper in the MVC aspects of Rails
   1. How do you make sure a preprocessor runs on your file? The file name must have the extension .erb. 
   1. What's the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
   1. What is the difference between the <%= and <% tags? <% is used for purely code-related stuff like if statements and for loops, where you don't actually want anything displayed. Where as <%= outputts important peices of the instance variables that one has received from your controller.
-  1. What is a view partial? 
-  1. How do you insert a partial into your view?
-  1. How can you tell that a view file is a partial?
-  1. How do you pass a local variable to a partial?
-  1. What's the magical Rails shortcut for rendering a User? A bunch of Users?
-  1. What are asset tags and why are they used?
+  1. What is a view partial? These are HTML files that aren't meant to be complete but can be shared by other files.
+  1. How do you insert a partial into your view? by adding the directory after a '#' symbol.
+  1. How can you tell that a view file is a partial? with an underscore in front of the file. (ie _user_form.html.erb)
+  1. How do you pass a local variable to a partial? To use the variable in your partial file, you drop the @ and call it like a normal variable
+  1. What's the magical Rails shortcut for rendering a User? A bunch of Users? 
+    A User 
+        # app/views/index.html.erb
+    <h1>Users</h1>
+    <ul>
+      <% @users.each do |user| %>
+        <%= render user %>     
+      <% end %>
+    </ul>
+
+    A bunch of users
+    # app/views/index.html.erb
+    <h1>Users</h1>
+    <ul>
+      <%= render @users %>
+    </ul>
+    
+  1. What are asset tags and why are they used? Asset tags are helper methods that output HTML tags to grab CSS or Javascript files.
 1. (By Monday 3/9) By yourself, complete the [Odin Project: Basic Routes, Views and Controllers](http://www.theodinproject.com/ruby-on-rails/basic-routes-views-and-controllers)
   1. Skip step 1 of the Application Skeleton section.  As we did last week, you will:
     1. Create a new Rails workspace on C9
